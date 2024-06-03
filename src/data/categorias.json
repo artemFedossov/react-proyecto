@@ -1,0 +1,18 @@
+[
+    {
+        "id": "ducati",
+        "nombre": "Ducati"
+    },
+    {
+        "id": "yamaha",
+        "nombre": "Yamaha"
+    },
+    {
+        "id": "kawasaki",
+        "nombre": "Kawasaki"
+    },
+    {
+        "id": "honda",
+        "nombre": "Honda"
+    }
+]

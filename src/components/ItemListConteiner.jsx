@@ -1,9 +1,10 @@
+import React from 'react';
+import { ItemList } from './ItemList';
 
-
-export const ItemListConteiner = ({mensaje}) => {
+export const ItemListConteiner = () => {
   return (
     <div className="contenedor">
-      <p>{mensaje}</p>
+      <ItemList/>
     </div>
   )
 }

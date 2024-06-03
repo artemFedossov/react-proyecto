@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ducati",
+        "modelo": "Panigale V4 R",
+        "motor": "998 cc, Desmosedici Stradale V4",
+        "potencia": "221 hp",
+        "precio": "$40000",
+        "imagen": "../../img/panigale-V4-R.jpg",
+        "caracteristicas": "Aerodinámica avanzada con alerones, Chasis de aluminio, Suspensión ajustable Öhlins, Sistema de control de tracción Ducati, Modos de conducción personalizados",
+        "categoria": {
+            "id": "ducati",
+            "nombre": "Ducati"
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Ducati",
+        "modelo": "Streetfighter V4 S",
+        "motor": "1103 cc, Desmosedici Stradale V4",
+        "potencia": "208 hp",
+        "precio": "$35000",
+        "imagen": "../../img/streetfighter-V4-S.jpg",
+        "caracteristicas": "Diseño naked agresivo, Suspensión electrónica Öhlins, Frenos Brembo Stylema, Sistema de control de tracción, Modos de conducción ajustables, Sistema de escape de alto rendimiento",
+        "categoria": {
+            "id": "ducati",
+            "nombre": "Ducati"
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Ducati",
+        "modelo": "Multistrada V4 S",
+        "motor": "1158 cc, V4 Granturismo",
+        "potencia": "170 hp",
+        "precio": "$30000",
+        "imagen": "../../img/multistrada-V4-S.jpg",
+        "caracteristicas": "Sistema de radar delantero y trasero, Suspensión electrónica semiactiva Ducati Skyhook Suspension (DSS), Modos de conducción, Pantalla TFT a color de 6.5 pulgadas, Sistema de navegación integrado, Frenos Brembo, Tecnología de seguridad avanzada",
+        "categoria": {
+            "id": "ducati",
+            "nombre": "Ducati"
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Yamaha",
+        "modelo": "YZF-R1M",
+        "motor": "998 cc, crossplane en línea cuatro cilindros",
+        "potencia": "200 hp",
+        "precio": "$25000",
+        "imagen": "../../img/yzf-R1M.jpg",
+        "caracteristicas": "Suspensión electrónica Öhlins, carenado de carbono, sistema de control de tracción avanzado",
+        "categoria": {
+            "id": "yamaha",
+            "nombre": "Yamaha"
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Yamaha",
+        "modelo": "MT-10 SP",
+        "motor": "998 cc, en línea cuatro cilindros",
+        "potencia": "160 hp",
+        "precio": "$18000",
+        "imagen": "../../img/mt-10-SP.jpg",
+        "caracteristicas": "Suspensión electrónica Öhlins, modos de conducción, control de tracción, frenos Brembo",
+        "categoria": {
+            "id": "yamaha",
+            "nombre": "Yamaha"
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Yamaha",
+        "modelo": "Niken GT",
+        "motor": "847 cc, CP3 en línea tres cilindros",
+        "potencia": "115 hp",
+        "precio": "$20000",
+        "imagen": "../../img/niken-GT.jpg",
+        "caracteristicas": "Sistema de inclinación doble con dos ruedas delanteras, control de tracción, modos de conducción, pantalla TFT",
+        "categoria": {
+            "id": "yamaha",
+            "nombre": "Yamaha"
+        }
+    },
+    {
+        "id": 7,
+        "nombre": "Kawasaki",
+        "modelo": "Ninja H2R",
+        "motor": "998 cc, sobrealimentado en línea cuatro cilindros",
+        "potencia": "310 hp",
+        "precio": "$55000",
+        "imagen": "../../img/ninja-H2R.jpg",
+        "caracteristicas": "Chasis enrejado, componentes de alta calidad, velocidad extrema",
+        "categoria": {
+            "id": "kawasaki",
+            "nombre": "Kawasaki"
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Kawasaki",
+        "modelo": "Ninja ZX-10RR",
+        "motor": "998 cc, en línea cuatro cilindros",
+        "potencia": "201 hp",
+        "precio": "$30000",
+        "imagen": "../../img/ninja-ZX-10RR.jpg",
+        "caracteristicas": "Suspensión electrónica, frenos Brembo, sistema de control de tracción, modos de conducción",
+        "categoria": {
+            "id": "kawasaki",
+            "nombre": "Kawasaki"
+        }
+    },
+    {
+        "id": 9,
+        "nombre": "Kawasaki",
+        "modelo": "Z H2 SE",
+        "motor": "998 cc, sobrealimentado en línea cuatro cilindros",
+        "potencia": "200 hp",
+        "precio": "$28000",
+        "imagen": "../../img/z-H2-SE.jpg",
+        "caracteristicas": "Suspensión electrónica Öhlins, frenos Brembo, sistema de control de tracción, modos de conducción",
+        "categoria": {
+            "id": "kawasaki",
+            "nombre": "Kawasaki"
+        }
+    },
+    {
+        "id": 10,
+        "nombre": "Honda",
+        "modelo": "CBR1000RR-R Fireblade SP",
+        "motor": "999 cc, en línea cuatro cilindros",
+        "potencia": "214 hp",
+        "precio": "$30000",
+        "imagen": "../../img/cbr1000RR-R-Fireblade-SP.jpg",
+        "caracteristicas": "Sistema de frenos Brembo, control de tracción ajustable, modos de conducción, suspensión electrónica Öhlins",
+        "categoria": {
+            "id": "honda",
+            "nombre": "Honda"
+        }
+    },
+    {
+        "id": 11,
+        "nombre": "Honda",
+        "modelo": "Gold Wing Tour",
+        "motor": "1833 cc, seis cilindros",
+        "potencia": "126 hp",
+        "precio": "$28000",
+        "imagen": "../../img/gold-Wing-Tour.jpg",
+        "caracteristicas": "Sistema de navegación, pantalla táctil, asientos calefaccionados, sistema de audio premium",
+        "categoria": {
+            "id": "honda",
+            "nombre": "Honda"
+        }
+    },
+    {
+        "id": 12,
+        "nombre": "Honda",
+        "modelo": "Africa Twin Adventure Sports ES",
+        "motor": "1084 cc, en línea bicilíndrico",
+        "potencia": "101 hp",
+        "precio": "$22000",
+        "imagen": "../../img/africa-Twin-Adventure-Sports-ES.jpg",
+        "caracteristicas": "Suspensión electrónica Showa, control de tracción ajustable, modos de conducción, pantalla TFT",
+        "categoria": {
+            "id": "honda",
+            "nombre": "Honda"
+        }
+    }
+]
