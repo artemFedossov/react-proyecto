@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import data from '../data/productos.json'
-import { Item } from './Item';
 
 export const ItemDetalle = () => {
 
@@ -18,6 +17,7 @@ export const ItemDetalle = () => {
         <img className='imagen' src={producto.imagen} alt="" />
       </div>
       <div>
+        <p>nombre: {producto.nombre}</p>
         <p>modelo: {producto.modelo}</p>
         <p>motor: {producto.motor}</p>
         <p>potencia: {producto.potencia}</p>

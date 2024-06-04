@@ -38,6 +38,7 @@ nav ul li a {
     background-color: black;
     color: white;
     padding: 5px;
+    margin: 5px;
 }
 
 .imagen {
@@ -50,7 +51,6 @@ nav ul li a {
 .itemList {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
 }
 
 .active {
@@ -62,12 +62,34 @@ nav ul li a {
     background-color: black;
     color: white;
     padding: 5px;
+    margin: 5px;
     display: flex;
-    padding: 0.5rem;
     gap: 1rem;
 }
 
 p {
     text-transform: uppercase;
     padding: 2px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.notFound {
+    background-color: rgb(218, 217, 217);
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorNotFound {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
 }
