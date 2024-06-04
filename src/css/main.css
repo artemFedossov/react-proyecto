@@ -34,9 +34,40 @@ nav ul li a {
     font-size: 1.5rem;
 }
 
-.contenedor {
-    height: 40vh;
+.item {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.imagen {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.itemList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.active {
+    font-weight: bold;
+    color: red;
+}
+
+.itemDetalle {
+    background-color: black;
+    color: white;
+    padding: 5px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+p {
+    text-transform: uppercase;
+    padding: 2px;
 }

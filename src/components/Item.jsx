@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import productos from "../data/productos.json";
+import { Link } from 'react-router-dom'
 
-export const Item = () => {
-
-    console.log(productos[0].nombre);
-
+export const Item = ({producto}) => {
 
   return (
-    <div>
-        <img src={productos[1].imagen} alt="" />
+    <div className='item'>
+      <img className='imagen' src={producto.imagen} alt="" />
+      <p>modelo: {producto.modelo}</p>
+      <p>motor: {producto.motor}</p>
+      <p>potencia: {producto.potencia}</p>
+      <p>precio: {producto.precio}</p>
+      <Link to={`/item/${producto.id}`}>Ver más!</Link>
     </div>
   )
 }

@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Item } from './Item';
 
-export const ItemList = () => {
+export const ItemList = ({productos}) => {
 
   return (
-    <Item/>
+    <div className='itemList'>
+    {
+      productos.map(producto => {
+        return (<Item key={producto.id} producto={producto}/>)
+      })
+    }
+      
+  </div>
   )
 }
