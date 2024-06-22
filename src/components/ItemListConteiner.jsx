@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router-dom';
-import categorias from '../data/categorias.json'
-import data from '../data/productos.json'
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 export const ItemListConteiner = () => {
 
-  let [productos, setProductos] = useState([]);
-  let [titulo, setTitulo] = useState([]);
+  let [products, setProducts] = useState([]);
+  let [title, setTitle] = useState([]);
   let {categoriaId} = useParams();
   
-  console.log(categorias)
-  console.log(categoriaId)
+
   useEffect(() => {
-    if(categoriaId) {
-      const filtro = data.filter(producto => producto.categoria.id === categoriaId)
-      setTitulo(categorias.find(cat => cat.id === categoriaId).nombre)
-      setProductos(filtro);
-    } else {
-      setProductos(data);
-      setTitulo("Catalogo");
-    }
+
+    const refProducts = collection(db, 'productos')
+
+    getDocs(refProducts)
+      .then((res) => {
+        setProducts(
+          res.docs.map((doc) => {
+            return {...doc.data(), id: doc.id}
+          }))
+      })
+
   },[categoriaId]);
 
   return (
     <div>
-      <h2>{titulo}</h2>
-      <ItemList productos={productos}/>
+      <h2>{title}</h2>
+      <ItemList products={products}/>
     </div>
   )
 }
