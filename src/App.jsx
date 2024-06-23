@@ -1,7 +1,8 @@
-import Header from "./components/header/Header";
+import DrawerAppBar from "./components/header/Header";
 import {ItemListConteiner} from "./components/ItemListConteiner";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './css/main.css';
+import './css/header.css';
 import {NotFound} from "./components/NotFound";
 import { ItemDetailContainer } from "./components/ItemDetailContainer";
 
@@ -10,7 +11,7 @@ function App() {
   return (
     
     <BrowserRouter>
-      <Header/>
+      <DrawerAppBar/>
       <Routes>
         <Route path="/" element={<ItemListConteiner/>}/>
         <Route path="/categoria/:categoriaId" element={<ItemListConteiner/>}/>

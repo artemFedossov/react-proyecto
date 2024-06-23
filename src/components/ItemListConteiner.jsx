@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ItemList } from './ItemList';
-import { useParams } from 'react-router-dom';
+import { redirect, useParams } from 'react-router-dom';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase/config';
 
@@ -13,8 +13,11 @@ export const ItemListConteiner = () => {
 
   useEffect(() => {
 
-    const refProducts = collection(db, 'productos')
-    const q = query(refProducts, where("categorias.id", "==", categoriaId))
+    const refProducts = collection(db, 'productos');
+    const q = categoriaId ? query(refProducts, where("categoria.id", "==", categoriaId)) : refProducts;
+
+    const refCategory = collection(db, 'categorias');
+    const queryCategory = categoriaId && query(refCategory, where("id", "==", categoriaId));
 
     getDocs(q)
       .then((res) => {
@@ -23,6 +26,16 @@ export const ItemListConteiner = () => {
             return {...doc.data(), id: doc.id}
           }))
       })
+
+    if (queryCategory) {
+      getDocs(queryCategory)
+        .then((res) => {
+          setTitle(res.docs[0].data().nombre)
+        })
+    }
+    else{
+      setTitle("Motos")
+    }
 
   },[categoriaId]);
 
