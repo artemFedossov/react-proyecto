@@ -1,4 +1,4 @@
-import DrawerAppBar from "./components/header/Header";
+import {DrawerAppBar} from "./components/header/Header";
 import {ItemListConteiner} from "./components/ItemListConteiner";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './css/main.css';
