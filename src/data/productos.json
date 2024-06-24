@@ -6,7 +6,7 @@
         "motor": "998 cc, Desmosedici Stradale V4",
         "potencia": "221 hp",
         "precio": "$40000",
-        "imagen": "../../public/img/panigale-V4-R.jpg",
+        "imagen": "../../img/panigale-V4-R.jpg",
         "caracteristicas": "Aerodinámica avanzada con alerones, Chasis de aluminio, Suspensión ajustable Öhlins, Sistema de control de tracción Ducati, Modos de conducción personalizados",
         "categoria": {
             "id": "ducati",
@@ -20,7 +20,7 @@
         "motor": "1103 cc, Desmosedici Stradale V4",
         "potencia": "208 hp",
         "precio": "$35000",
-        "imagen": "../../public/img/streetfighter-V4-S.jpg",
+        "imagen": "../../img/streetfighter-V4-S.jpg",
         "caracteristicas": "Diseño naked agresivo, Suspensión electrónica Öhlins, Frenos Brembo Stylema, Sistema de control de tracción, Modos de conducción ajustables, Sistema de escape de alto rendimiento",
         "categoria": {
             "id": "ducati",
@@ -34,7 +34,7 @@
         "motor": "1158 cc, V4 Granturismo",
         "potencia": "170 hp",
         "precio": "$30000",
-        "imagen": "../../public/img/multistrada-V4-S.jpg",
+        "imagen": "../../img/multistrada-V4-S.jpg",
         "caracteristicas": "Sistema de radar delantero y trasero, Suspensión electrónica semiactiva Ducati Skyhook Suspension (DSS), Modos de conducción, Pantalla TFT a color de 6.5 pulgadas, Sistema de navegación integrado, Frenos Brembo, Tecnología de seguridad avanzada",
         "categoria": {
             "id": "ducati",

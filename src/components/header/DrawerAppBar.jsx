@@ -1,20 +1,3 @@
-/* import React from 'react'
-import Carrito from './Carrito'
-import Navegador from './Navegador'
-
-const Header = () => {
-  return (
-    <header className='header'>
-      <h1>Style</h1>
-      <Navegador/>
-      <Carrito/>
-    </header>
-  )
-}
-
-export default Header */
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -25,7 +8,7 @@ import Navegador from './Navegador';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-export const DrawerAppBar = (props) => {
+export const DrawerAppBar = () => {
 
   const theme = createTheme({
     palette: {
