@@ -8,7 +8,7 @@ import Navegador from './Navegador';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-export const DrawerAppBar = () => {
+export const NavBar = () => {
 
   const theme = createTheme({
     palette: {

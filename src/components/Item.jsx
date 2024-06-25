@@ -23,12 +23,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom'
 
 export const Item = ({producto}) => {
   return (
-    <Card sx={{ maxWidth: 350 }} className='item'>
+    <Card sx={{ maxWidth: 350, backgroundColor: '#2196f3'}} className='item'>
       <CardMedia
-        sx={{ height: 300 }}
+        component="img"
+        sx={{ width: '100%', height: 200, objectFit: 'cover',}}
         image={producto.imagen}
         title={producto.modelo}
       />
@@ -43,8 +45,10 @@ export const Item = ({producto}) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px"}}>Agregar al Carrito</Button>
+        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px"}}>
+          <Link className='link' to={`/item/${producto.id}`}>Ver más!</Link>
+        </Button>
       </CardActions>
     </Card>
   );

@@ -9,15 +9,15 @@ export const ItemListConteiner = () => {
   let [products, setProducts] = useState([]);
   let [title, setTitle] = useState([]);
   let {categoriaId} = useParams();
-  
 
   useEffect(() => {
 
     const refProducts = collection(db, 'productos');
-    const q = categoriaId ? query(refProducts, where("categoria.id", "==", categoriaId)) : refProducts;
+    let q = categoriaId ? query(refProducts, where("categoria.id", "==", categoriaId)) : refProducts;
 
     const refCategory = collection(db, 'categorias');
     const queryCategory = categoriaId && query(refCategory, where("id", "==", categoriaId));
+
 
     getDocs(q)
       .then((res) => {
@@ -25,7 +25,7 @@ export const ItemListConteiner = () => {
           res.docs.map((doc) => {
             return {...doc.data(), id: doc.id}
           }))
-      })
+      }) 
 
     if (queryCategory) {
       getDocs(queryCategory)
