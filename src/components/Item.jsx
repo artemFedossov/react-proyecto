@@ -25,28 +25,27 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
 
-export const Item = ({product}) => {
+export const Item = ({ product }) => {
   return (
-    <Card sx={{ maxWidth: 350, backgroundColor: '#2196f3'}} className='item'>
+    <Card sx={{ maxWidth: 350, backgroundColor: '#2196f3' }} className='item'>
       <CardMedia
         component="img"
-        sx={{ width: '100%', height: 200, objectFit: 'cover',}}
+        sx={{ width: '100%', height: 200, objectFit: 'cover', }}
         image={product.imagen}
-        title={product.modelo}
-      />
-      <CardContent>
+        title={product.modelo} />
+      <CardContent> 
         <Typography gutterBottom variant="h5" component="div">
-        {product.modelo}
+          {product.modelo}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-            <span><strong>Motor:</strong> {product.motor}</span>
-            <span><strong>Producto:</strong> {product.potencia}</span>
-            <span className='precio'><strong>precio:</strong> {product.precio} USD</span>
+          <span><strong>Motor:</strong> {product.motor}</span><br />
+          <span><strong>Producto:</strong> {product.potencia}</span><br />
+          <span className='precio'><strong>precio:</strong> {product.precio} USD</span><br />
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px"}}>Agregar al Carrito</Button>
-        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px"}}>
+        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px" }}>Agregar al Carrito</Button>
+        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px" }}>
           <Link className='link' to={`/item/${product.id}`}>Ver más!</Link>
         </Button>
       </CardActions>

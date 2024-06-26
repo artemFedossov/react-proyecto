@@ -10,39 +10,35 @@ import Typography from '@mui/material/Typography';
 
 export const Cargas = () => {
 
-    let {itemId} = useParams();
+    let { itemId } = useParams();
     let [producto, setProducto] = useState([]);
 
     useEffect(() => {
         setProducto(data.find((prod) => prod.id === parseInt(itemId)))
-    },[itemId])
+    }, [itemId])
 
-  return (
-    
-      <Card sx={{ maxWidth: 350, height: 400, display: 'flex', backgroundColor: '#2196f3'}} className='item'>
-        <CardMedia
-            component="img"
-            sx={{ width: '100%', height: 400, objectFit: 'cover',}}
-            image={producto.imagen}
-            title={producto.nombre}/>
-        
-            <CardContent>
-                <Typography variant="body1" MuiListItemText-primary="primary">
-                    <p><strong>nombre:</strong> {producto.nombre}</p>
-                    <p><strong>modelo:</strong> {producto.modelo}</p>
-                    <p><strong>motor:</strong> {producto.motor}</p>
-                    <p><strong>potencia:</strong> {producto.potencia}</p>
-                    <p><strong>precio:</strong> {producto.precio} USD</p>
-                    <p><strong>caracteristicas:</strong> {producto.caracteristicas}</p>
-                </Typography>
+    return (
+        <Card sx={{ maxWidth: 'full', height: 400, backgroundColor: '#2196f3', }}>
+            <CardContent sx={{ display: 'flex', flexDirection: 'row', marginLeft: -2, marginTop: -1 }}>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 500, height: 400, objectFit: 'cover', }}
+                    image={producto.imagen}
+                    title={producto.nombre} />
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', maxWidth: 500 }}>
+                    <Typography variant="body1" sx={{ color: "white" }}>
+                        <strong>nombre:</strong> {producto.nombre}<br />
+                        <strong>modelo:</strong> {producto.modelo}<br />
+                        <strong>motor:</strong> {producto.motor}<br />
+                        <strong>potencia:</strong> {producto.potencia}<br />
+                        <span className='precio'><strong>precio:</strong> {producto.precio} USD</span><br />
+                        <strong>caracteristicas:</strong> {producto.caracteristicas}
+                    </Typography>
+                    <CardActions>
+                        <Button size="small" variant="outlined" sx={{ color: "white", border: "white solid 1px" }}>Agregar al Carrito</Button>
+                    </CardActions>
+                </CardContent>
             </CardContent>
-            <CardActions>
-            <Button size="small" variant="outlined" sx={{ color: "white", border: "white solid 1px"}}>Agregar al Carrito</Button>
-            <Button size="small" variant="outlined" sx={{ color: "white", border: "white solid 1px"}}>Volver</Button>
-            </CardActions>
-        
-        
-      </Card>
-    
-  )
+        </Card>
+    )
 }
