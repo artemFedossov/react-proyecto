@@ -5,7 +5,7 @@
         "modelo": "Panigale V4 R",
         "motor": "998 cc, Desmosedici Stradale V4",
         "potencia": "221 hp",
-        "precio": "$40000",
+        "precio": 40000,
         "imagen": "../../img/panigale-V4-R.jpg",
         "caracteristicas": "Aerodinámica avanzada con alerones, Chasis de aluminio, Suspensión ajustable Öhlins, Sistema de control de tracción Ducati, Modos de conducción personalizados",
         "categoria": {
