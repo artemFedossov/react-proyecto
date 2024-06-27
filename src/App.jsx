@@ -10,21 +10,24 @@ import { NavBar } from "./components/header/NavBar";
 import { ItemDetail } from "./components/ItemDetail";
 import { Cargas } from "./components/Cargas";
 import { Carrito } from "./components/Carrito";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
 
   return (
     
-    <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<ComponenteCarga/>}/>
-        <Route path="/categoria/:categoriaId" element={<ItemListConteiner/>}/>
-        <Route path="/item/:itemId" element={<Cargas/>}/>
-        <Route path="/*" element={<NotFound/>}/>
-        <Route path="/carrito" element={<Carrito/>}/>
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<ComponenteCarga/>}/>
+          <Route path="/categoria/:categoriaId" element={<ItemListConteiner/>}/>
+          <Route path="/item/:itemId" element={<Cargas/>}/>
+          <Route path="/*" element={<NotFound/>}/>
+          <Route path="/carrito" element={<Carrito/>}/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 

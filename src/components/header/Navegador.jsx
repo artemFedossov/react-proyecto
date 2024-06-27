@@ -26,6 +26,7 @@ const Navegador = () => {
           <li>
             <NavLink to="/">Inicio</NavLink>
             <AddShoppingCartIcon sx={{ color: 'green', cursor: 'pointer' }} />
+            <NavLink className='link' to={`/carrito`}>Ver más!</NavLink>
           </li>
           { 
             categories.map((category) => {

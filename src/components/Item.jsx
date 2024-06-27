@@ -16,7 +16,7 @@ export const Item = ({producto}) => {
 }
  */
 
-import * as React from 'react';
+import React, { useContext } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -24,8 +24,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext';
 
 export const Item = ({ product }) => {
+
+  const {handleAdd} = useContext(CartContext)
+
   return (
     <Card sx={{ maxWidth: 350, backgroundColor: '#2196f3' }} className='item'>
       <CardMedia
@@ -44,7 +48,7 @@ export const Item = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px" }}>Agregar al Carrito</Button>
+        <Button onClick={() => handleAdd(product)} size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px" }}>Agregar al Carrito</Button>
         <Button size="small" variant="outlined" sx={{ color: "black", border: "black solid 1px" }}>
           <Link className='link' to={`/item/${product.id}`}>Ver más!</Link>
         </Button>
