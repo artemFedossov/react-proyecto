@@ -2,7 +2,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { db } from '../../firebase/config'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import categorias from '../../data/categorias.json'
 
 const Navegador = () => {
 
@@ -25,20 +25,18 @@ const Navegador = () => {
       <ul>
           <li>
             <NavLink to="/">Inicio</NavLink>
-            <AddShoppingCartIcon sx={{ color: 'green', cursor: 'pointer' }} />
-            <NavLink className='link' to={`/carrito`}>Ver más!</NavLink>
           </li>
           { 
-            categories.map((category) => {
+            categorias.map((categoria) => {
               return (
-                <li key={category.id}>
-                  <NavLink to={`/categoria/${category.id}`}>
-                    {category.nombre}
+                <li key={categoria.id}>
+                  <NavLink to={`/categoria/${categoria.id}`}>
+                    {categoria.nombre}
                   </NavLink>
                 </li>
               )
             })
-          } 
+          }
       </ul>
     </nav>
   )

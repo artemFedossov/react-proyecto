@@ -7,10 +7,10 @@ import {NotFound} from "./components/NotFound";
 import { ItemDetailContainer } from "./components/ItemDetailContainer";
 import { ComponenteCarga } from "./components/ComponenteCarga";
 import { NavBar } from "./components/header/NavBar";
-import { ItemDetail } from "./components/ItemDetail";
 import { Cargas } from "./components/Cargas";
-import { Carrito } from "./components/Carrito";
+import { CartWidget } from "./components/CartWidget";
 import { CartProvider } from "./context/CartContext";
+import { Form } from "./components/Form";
 
 function App() {
 
@@ -20,11 +20,12 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<ComponenteCarga/>}/>
+          <Route path="/" element={<ItemListConteiner/>}/>
           <Route path="/categoria/:categoriaId" element={<ItemListConteiner/>}/>
-          <Route path="/item/:itemId" element={<Cargas/>}/>
+          <Route path="/item/:itemId" element={<ItemDetailContainer/>}/>
+          <Route path="/carrito" element={<CartWidget/>}/>
+          <Route path="/formulario" element={<Form/>}/>
           <Route path="/*" element={<NotFound/>}/>
-          <Route path="/carrito" element={<Carrito/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

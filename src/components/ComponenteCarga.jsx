@@ -23,7 +23,7 @@ export const ComponenteCarga = () => {
 
   return (
     <div>
-      <h2>{titulo}</h2>
+      <h2 className='title'>{titulo}</h2>
       <ItemList products={products}/>
     </div>
   )
