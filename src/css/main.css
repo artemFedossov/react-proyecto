@@ -1,42 +1,30 @@
+/* Estilos generales para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav ul {
-    display: flex;
-    list-style-type: none;
-    gap: 1rem;
-}
-
-nav ul li a {
+/* Estilos para los enlaces */
+.link {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
 }
 
-
-.itemList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
+/* Estilos para los enlaces activos */
 .active {
     font-weight: bold;
     color: black;
 }
 
-
-
-
-h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2rem;
+/* Estilos para la disposición de los elementos en la lista de productos */
+.itemList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-
+/* Estilos para la etiqueta de precio */
 .precio {
     background-color: green;
     color: white;
@@ -46,17 +34,19 @@ h2 {
     margin-left: -2px;
 }
 
-.bg {
-    background-image: url("./img/background.jpg");
-}
-
-.title {
-    padding-top: 2rem;
-}
-
+/* Estilos para la disposición en cuadrícula del formulario */
 .gridForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px ;
     max-width: 700px;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: white;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
 }

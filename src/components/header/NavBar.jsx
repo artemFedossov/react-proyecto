@@ -12,6 +12,7 @@ import { CartContext } from "../../context/CartContext";
 import Browser from "./Browser";
 
 export const NavBar = () => {
+  // Obtiene el carrito y la función calculateAmount del contexto CartContext
   const { cart, calculateAmount } = useContext(CartContext);
 
   return (
@@ -30,16 +31,20 @@ export const NavBar = () => {
             component="div"
             sx={{ display: "flex", alignItems: "center", gap: 1 }}
           >
+            {/* Logo y nombre del sitio */}
             <img style={{ width: "5rem" }} src="/img/logo.png" alt="logo" />
             RocketRiders
           </Typography>
+          {/* Componente de navegación */}
           <Box>
             <Browser />
           </Box>
+          {/* Muestra el icono del carrito de compras solo si hay elementos en el carrito */}
           {cart.length > 0 && (
             <NavLink to={`/carrito`}>
               <Box sx={{ position: "relative", display: "inline-block" }}>
                 <AddShoppingCartIcon sx={{ color: "white", fontSize: 40 }} />
+                {/* Muestra el número de elementos en el carrito */}
                 <Box
                   sx={{
                     position: "absolute",
@@ -64,9 +69,14 @@ export const NavBar = () => {
           )}
         </Toolbar>
       </AppBar>
+      {/* Espaciador para que el contenido no esté oculto detrás del AppBar */}
       <Box component="div" sx={{ p: 0.5 }}>
         <Toolbar />
       </Box>
     </Box>
   );
 };
+
+/*Se utiliza el hook 'useContext' para acceder al contexto 'CartContext'. Se obtienen 'cart' (el estado del carrito) y 'calculateAmount' (una función para calcular la cantidad total de elementos en el carrito).
+
+*/

@@ -13,10 +13,14 @@ import { db } from "../firebase/config";
 import { CartContext } from "../context/CartContext";
 
 export const Form = () => {
+  // Obtiene el carrito y la función para vaciar el carrito del contexto CartContext
   const { cart, emptyCart } = useContext(CartContext);
+  // Configuración del formulario utilizando react-hook-form
   const { register, handleSubmit } = useForm();
+  // Estado local para guardar el identificador del documento creado en Firebase
   let [docId, setDocId] = useState("");
 
+  // Función que se ejecuta al enviar el formulario
   const buy = (data) => {
     const pedido = {
       cliente: data,
@@ -43,7 +47,7 @@ export const Form = () => {
           component="form"
           noValidate
           autoComplete="off"
-          onSubmit={handleSubmit(comprar)}
+          onSubmit={handleSubmit(buy)}
         >
           <div className="gridForm">
             <TextField
@@ -78,7 +82,7 @@ export const Form = () => {
             <TextField
               required
               id="correoElectronico"
-              label="Correo Electronico"
+              label="Correo Electrónico"
               variant="standard"
               type="email"
               {...register("email")}
@@ -86,7 +90,7 @@ export const Form = () => {
             <TextField
               required
               id="telefono"
-              label="Telefono"
+              label="Teléfono"
               variant="standard"
               type="number"
               InputLabelProps={{ shrink: true }}
@@ -136,3 +140,18 @@ export const Form = () => {
     </>
   );
 };
+
+/*Se utiliza el hook 'useContext' para acceder al contexto 'CartContext'. Se obtienen 'cart' (el estado del carrito) y 'emptyCart' (una función para vaciar el carrito). 
+
+Se utiliza 'useState' para manejar 'docId', que guarda el identificador del documento creado en Firebase.
+
+La función 'buy' se encarga de crear un objeto pedido con la información del cliente, productos en el carrito y la fecha actual.
+'addDoc' se utiliza para añadir el documento a la colección pedidos en Firebase.
+Una vez completada la operación, se guarda el identificador del documento en el estado 'docId' y se vacía el carrito.
+
+Si el carrito tiene productos (cart.length > 0), se muestra el formulario.
+El formulario utiliza react-hook-form para manejar la validación y el envío.
+Varios campos de entrada (TextField) se utilizan para recopilar información del cliente.
+Un botón de envío (Button) se utiliza para enviar el formulario.
+Si el carrito está vacío, se muestra un mensaje de agradecimiento con el identificador de la compra (docId).
+*/

@@ -11,10 +11,11 @@ import Typography from "@mui/material/Typography";
 import { CartContext } from "../context/CartContext";
 
 export const Item = ({ product }) => {
+  // Obtiene la función handleAdd del contexto CartContext
   const { handleAdd } = useContext(CartContext);
 
   return (
-    <Card sx={{ maxWidth: 400, backgroundColor: "#2196f3" }} className="item">
+    <Card sx={{ maxWidth: 400, backgroundColor: "#2196f3", margin: 2 }}>
       <CardMedia
         component="img"
         sx={{ width: "100%", height: 200, objectFit: "cover" }}
@@ -62,3 +63,11 @@ export const Item = ({ product }) => {
     </Card>
   );
 };
+
+/*El componente 'Item' recibe una prop 'product', que contiene la información del producto que se va a mostrar. 
+
+Se utiliza el hook 'useContext' para acceder al contexto 'CartContext'. Se obtiene la función 'handleAdd' para agregar productos al carrito.
+
+'CardActions' contiene dos botones:
+Agregar al Carrito: Llama a la función 'handleAdd' con el producto actual como argumento.
+Ver más: Enlaza a una página de detalles del producto utilizando Link y Button.*/

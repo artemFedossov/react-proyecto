@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
-import { redirect, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/config";
+import { Box, Typography } from "@mui/material";
 
 export const ItemListConteiner = () => {
   let [products, setProducts] = useState([]);
@@ -37,9 +38,28 @@ export const ItemListConteiner = () => {
   }, [categoriaId]);
 
   return (
-    <div>
-      <h2 className="title">{title}</h2>
+    <Box sx={{ minHeight: "100vh"}}>
+      <Typography
+        align="center"
+        variant="h2"
+        sx={{
+          textTransform: "uppercase",
+          fontSize: "2rem",
+          paddingTop: "2rem",
+        }}
+      >
+        {title}
+      </Typography>
       <ItemList products={products} />
-    </div>
+    </Box>
   );
 };
+
+/*'useEffect', Se ejecuta cuando cambia 'categoriaId'. 
+Dentro de este efecto:
+  Crea una referencia a la colección de productos en Firestore (refProducts).
+  Crea una consulta 'q' para filtrar productos por 'categoriaId' si está definido.
+  Si 'categoriaId' está definido, también consulta la colección de categorías para obtener el título de la categoría actual.
+  Utiliza 'getDocs' para obtener los documentos correspondientes de Firestore para ambos, productos (q) y categoría (queryCategory).
+  Actualiza el estado 'products' con los datos de los documentos de productos obtenidos.
+  Actualiza el estado 'title' con el nombre de la categoría obtenido de la consulta de categoría si está definido, de lo contrario, establece el título predeterminado como "Motos". */

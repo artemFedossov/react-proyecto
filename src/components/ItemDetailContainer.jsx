@@ -22,3 +22,13 @@ export const ItemDetailContainer = () => {
     return <div>Cargando...</div>;
   }
 };
+
+/*'useState' define el estado 'product' como un objeto inicializado como un array vacío ([]). Este estado se utilizará para almacenar los detalles del producto recuperados de Firestore. 
+
+'useEffect' Se ejecuta cuando cambia 'itemId', es decir, cuando el parámetro 'itemId' en la URL cambia. Dentro de este efecto:
+Crea una referencia al documento específico en Firestore
+Llama a getDoc, para obtener el documento correspondiente.
+Actualiza el estado 'product' con los datos del documento recuperado y le asigna un nuevo campo 'id' que representa el ID del documento en Firestore.
+
+Si 'product' tiene algún valor, se renderiza el componente 'ItemDetail' pasándole el objeto 'product' como prop.
+Si 'product' aún no tiene ningún valor, muestra un mensaje de "Cargando...".*/

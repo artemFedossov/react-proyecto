@@ -16,7 +16,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { CartContext } from "../context/CartContext";
 
 export const CartWidget = () => {
-  const { cart, handleAdd, handleDelete, handleCalculate } = useContext(CartContext);
+  // Obtiene el carrito y las funciones de manipulación del contexto CartContext
+  const { cart, handleAdd, handleDelete, calculate } = useContext(CartContext);
 
   return (
     <List
@@ -63,7 +64,7 @@ export const CartWidget = () => {
       {cart.length > 0 && (
         <Stack direction="column">
           <Typography sx={{ display: "flex", justifyContent: "center" }}>
-            El total es: $<strong>{handleCalculate()}</strong>
+            El total es: $<strong>{calculate()}</strong>
           </Typography>
           <NavLink
             to={`/formulario`}
@@ -79,3 +80,9 @@ export const CartWidget = () => {
     </List>
   );
 };
+
+
+/*Se utiliza el hook 'useContext' para acceder al contexto 'CartContext'. Se obtienen 'cart' (el estado del carrito), 'handleAdd' (una función para añadir productos al carrito), 'handleDelete' (una función para eliminar productos del carrito) y calculate (una función para calcular el total).
+
+Si el carrito no está vacío, se muestra el total calculado (calculate()) y un botón para confirmar la compra que redirige al formulario de compra.
+*/
