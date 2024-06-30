@@ -38,7 +38,7 @@ export const ItemListConteiner = () => {
   }, [categoriaId]);
 
   return (
-    <Box sx={{ minHeight: "100vh"}}>
+    <Box sx={{ minHeight: "85vh"}}>
       <Typography
         align="center"
         variant="h2"

@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 
 const TermsAndConditions = () => {
   return (
-    <Box sx={{ maxWidth: 600, mx: "auto", my: 4, px: 2 }}>
+    <Box sx={{ maxWidth: 600, mx: "auto", my: 4, px: 2, minHeight: "100vh" }}>
       <Typography variant="h4" gutterBottom>
         Términos y Condiciones
       </Typography>

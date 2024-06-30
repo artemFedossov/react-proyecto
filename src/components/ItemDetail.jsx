@@ -12,7 +12,7 @@ export const ItemDetail = ({ product }) => {
   const { handleAdd } = useContext(CartContext);
 
   return (
-    <Card sx={{ maxWidth: "full", height: 400, backgroundColor: "#2196f3" }}>
+    <Card sx={{ maxWidth: "full", height: 400, backgroundColor: "#2196f3", minHeight: "100vh" }}>
       <CardContent
         sx={{
           display: "flex",

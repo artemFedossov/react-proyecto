@@ -37,7 +37,7 @@ export const Form = () => {
   };
 
   return (
-    <>
+    <Box sx={{ minHeight: "100vh"}} >
       {cart.length > 0 ? (
         <Box
           sx={{
@@ -137,7 +137,7 @@ export const Form = () => {
           <Typography>Nos comunicaremos en brevedad con usted</Typography>
         </Box>
       )}
-    </>
+    </Box>
   );
 };
 

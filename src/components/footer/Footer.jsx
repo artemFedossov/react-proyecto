@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <Box
+      
       component="footer"
       sx={{
         backgroundColor: "#1976d2",
