@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { ItemDetail } from "./ItemDetail";
+import Box from "@mui/material/Box";
 
 export const ItemDetailContainer = () => {
   let { itemId } = useParams();
@@ -17,11 +18,16 @@ export const ItemDetailContainer = () => {
   }, [itemId]);
 
   if (product) {
-    return <ItemDetail product={product} />;
+    return (
+      <Box sx={{ minHeight: "100vh", marginTop: "5rem"}}>
+        <ItemDetail product={product} />
+      </Box>)
   } else {
     return <div>Cargando...</div>;
   }
 };
+
+
 
 /*'useState' define el estado 'product' como un objeto inicializado como un array vacío ([]). Este estado se utilizará para almacenar los detalles del producto recuperados de Firestore. 
 

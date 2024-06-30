@@ -22,7 +22,7 @@ export const CartWidget = () => {
   return (
     <List
       border={"solid black 1px"}
-      sx={{ width: "100%", maxWidth: 300, bgcolor: "background.paper" }} >
+      sx={{ width: "100%", maxWidth: 300, bgcolor: "background.paper", minHeight: "100vh" }} >
       {cart.length > 0 ? (
         cart.map((prod) => {
           return (

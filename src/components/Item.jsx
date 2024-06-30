@@ -15,7 +15,7 @@ export const Item = ({ product }) => {
   const { handleAdd } = useContext(CartContext);
 
   return (
-    <Card sx={{ maxWidth: 400, backgroundColor: "#2196f3", margin: 2, minHeight: "100vh" }}>
+    <Card sx={{ maxWidth: 400, backgroundColor: "#2196f3", margin: 2 }}>
       <CardMedia
         component="img"
         sx={{ width: "100%", height: 200, objectFit: "cover" }}

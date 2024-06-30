@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Grid, Link, Typography } from "@mui/material";
-import AboutUs from "./AboutUs";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -46,15 +45,15 @@ const Footer = () => {
         <Grid item xs={12} md={4}>
           <Typography variant="h6">Redes Sociales</Typography>
           <Typography>
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="https://www.facebook.com" color="inherit" underline="hover">
               Facebook
             </Link>
             <br />
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="https://www.twitter.com" color="inherit" underline="hover">
               Twitter
             </Link>
             <br />
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="https://www.instagram.com" color="inherit" underline="hover">
               Instagram
             </Link>
           </Typography>
