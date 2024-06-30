@@ -45,15 +45,15 @@ const Footer = () => {
         <Grid item xs={12} md={4}>
           <Typography variant="h6">Redes Sociales</Typography>
           <Typography>
-            <Link href="https://www.facebook.com" color="inherit" underline="hover">
+            <Link href="https://www.facebook.com" color="inherit" underline="hover" target="_blank" rel="noopener">
               Facebook
             </Link>
             <br />
-            <Link href="https://www.twitter.com" color="inherit" underline="hover">
+            <Link href="https://www.twitter.com" color="inherit" underline="hover" target="_blank" rel="noopener">
               Twitter
             </Link>
             <br />
-            <Link href="https://www.instagram.com" color="inherit" underline="hover">
+            <Link href="https://www.instagram.com" color="inherit" underline="hover" target="_blank" rel="noopener">
               Instagram
             </Link>
           </Typography>
